@@ -71,21 +71,11 @@
   display: none;
 }
 
-div.sk-parallel-item,
-div.sk-serial,
+/* div.sk-parallel-item, */
+/* div.sk-serial, */
 div.sk-item {
-   border: 1px solid blue;
-
-}
-
-/* Parallel-specific style estimator block */
-
- .sk-global div.sk-parallel-item::after {
-  content: "";
-  width: 100%;
-  border-bottom: 2px solid var(--sklearn-color-text-on-default-background);
-  flex-grow: 1;
-  display: none;
+   /* border: 1px solid blue; */
+  padding-left: 10px;
 
 }
 
@@ -96,24 +86,15 @@ div.sk-item {
   justify-content: left;
   background-color: var(--sklearn-color-background);
   position: relative;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .sk-global div.sk-parallel-item {
   display: flex;
   flex-direction: column;
-  border: 2px solid green;
+  /* border: 2px solid green; */
 }
 
-/* .sk-global div.sk-parallel-item:first-child::after {
-  align-self: flex-end;
-  width: 50%;
-} */
-
-/* .sk-global div.sk-parallel-item:last-child::after {
-  align-self: flex-start;
-  width: 50%;
-} */
 
 .sk-global div.sk-parallel-item:only-child::after {
   width: 0;
@@ -128,47 +109,32 @@ div.sk-item {
   background-color: var(--sklearn-color-background);
   padding-right: 1em;
   padding-left: 1em;
+ position: relative;
 }
-/* Vertical line running down the left side of serial children */
-.sk-global div.sk-serial::before,
-.sk-global div.sk-parallel::before {
-  content: "";
-  position: absolute;
-  left: 1.5em;
-  top: 5%;
-  bottom: 10%;
-  width: 2px;
-  background-color: var(--sklearn-color-text-on-default-background);
+/* tree lines */
+.sk-global div.sk-serial div.sk-item::before,
+.sk-global div.sk-parallel div.sk-item::before {
+  position:absolute;
+   left:-10px;
+    /* top:0px; */
+    border-left:.2em solid orange;
+    border-bottom:.2em solid purple;
+    content: "";
+    width: 20px;
+    height: 20px;
+    padding-left: 10px;
+
+  /* background-color: var(--sklearn-color-text-on-default-background); */
 }
 
-/* Horizontal line from vertical rail to each child */
-.sk-global div.sk-serial > .sk-item,
-.sk-global div.sk-serial > .sk-estimator,
-.sk-global div.sk-parallel > .sk-item,
-.sk-global div.sk-parallel > .sk-estimator {
-  position: relative;
-  margin-left: 1.5em;
-}
-
-.sk-global div.sk-serial > .sk-item::before,
-.sk-global div.sk-serial > .sk-estimator::before,
-.sk-global div.sk-parallel > .sk-item::before,
-.sk-global div.sk-parallel > .sk-estimator::before {
-  content: "";
-  position: absolute;
-  left: -1.5em;
-  top: 0;
-  width: 3em;
-  height: 2px;
-  background-color: var(--sklearn-color-text-on-default-background);
-}
 /* .sk-global div.sk-item  div.sk-parallel {
   display: none;
-} */
+}
 .sk-global div.sk-item:has(> .sk-label-container input.sk-toggleable__control:checked) > div.sk-serial,
 .sk-global div.sk-item:has(> .sk-label-container input.sk-toggleable__control:checked) > div.sk-parallel {
-  display: flex;
-}
+ display: flex;
+} */
+
 /* Toggleable style: style used for estimator/Pipeline/ColumnTransformer box that is
 clickable and can be expanded/collapsed.
 - Pipeline and ColumnTransformer use this feature and define the default style
