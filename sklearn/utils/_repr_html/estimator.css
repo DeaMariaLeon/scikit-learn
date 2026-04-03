@@ -56,16 +56,6 @@
   width: 1px;
 }
 
-.sk-global div.sk-dashed-wrapped {
-  /* border: 1px dashed var(--sklearn-color-line);
-  margin: 0 0.4em 0.5em 0.4em;
-  box-sizing: border-box;
-  padding-bottom: 0.4em;
-  background-color: var(--sklearn-color-background); */
-
-}
-
-
 .sk-global div.sk-container {
   /* jupyter's `normalize.less` sets `[hidden] { display: none; }`
      but bootstrap.min.css set `[hidden] { display: none !important; }`
@@ -84,7 +74,6 @@
 div.sk-serial,
 .sk-global div.sk-item {
    /* border: 1px solid blue; */
-  /* padding-left: 10px; */
   position: relative;
   margin-left: 20px;
 }
@@ -95,7 +84,6 @@ div.sk-serial,
   align-items: flex-start;
   justify-content: left;
   background-color: var(--sklearn-color-background);
-  /* position: relative; */
   /* border: 2px solid red; */
 }
 
@@ -119,7 +107,6 @@ div.sk-serial,
   background-color: var(--sklearn-color-background);
   padding-right: 1em;
   /* padding-left: 1em; */
- /* position: relative; */
 }
 /* tree lines */
 .sk-global div.sk-serial div.sk-item::before,
@@ -127,15 +114,13 @@ div.sk-serial,
   position:absolute;
    left:-10px;
     /* top:0px; */
-    border-left:.2em solid orange;
+    border-left:.2em solid orange; /* colors used to debug */
     border-bottom:.2em solid purple;
+    /* border-left:.2em solid var(--sklearn-color-text-on-default-background); */
+    /* border-bottom:.2em solid var(--sklearn-color-text-on-default-background); */
     content: "";
     width: 20px;
     height: 1em;
-    /* box-sizing: border-box; */
-    /* padding-left: 10px; */
-
-  /* background-color: var(--sklearn-color-text-on-default-background); */
 }
 
 .sk-global div.sk-serial div.sk-item::after,
@@ -148,22 +133,23 @@ div.sk-serial,
     width: 20px;
     height: 100%;
     padding-left: 10px;
-
-  /* background-color: var(--sklearn-color-text-on-default-background); */
 }
-
+/* So the vertical line doesn't go too low */
 .sk-global div.sk-serial div.sk-item:last-child::after,
 .sk-global div.sk-parallel div.sk-item:last-child::after{
   display: none;
 }
 
-/* .sk-global div.sk-item  div.sk-parallel {
+/* Hide all the items */
+.sk-global div.sk-item  div.sk-parallel,
+.sk-global div.sk-item  div.sk-serial {
   display: none;
 }
+/* Show all items when */
 .sk-global div.sk-item:has(> .sk-label-container input.sk-toggleable__control:checked) > div.sk-serial,
 .sk-global div.sk-item:has(> .sk-label-container input.sk-toggleable__control:checked) > div.sk-parallel {
  display: flex;
-} */
+}
 
 /* Toggleable style: style used for estimator/Pipeline/ColumnTransformer box that is
 clickable and can be expanded/collapsed.
@@ -241,7 +227,6 @@ clickable and can be expanded/collapsed.
 .sk-global input.sk-toggleable__control:checked~div.sk-toggleable__content {
   /* Expand drop-down */
   display: block;
-  /*width: 100%;*/
   overflow: visible;
 }
 
