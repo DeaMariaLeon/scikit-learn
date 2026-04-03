@@ -123,7 +123,8 @@
     content: "";
     width: 20px;
     height: 1em;
-    padding-left: 10px;
+    box-sizing: border-box;
+    /* padding-left: 10px; */
 
   /* background-color: var(--sklearn-color-text-on-default-background); */
 }
