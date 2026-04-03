@@ -50,7 +50,7 @@
 }
 
 .sk-global div.sk-dashed-wrapped {
-  /* border: 1px dashed var(--sklearn-color-line); THIS MESSES UP THE VERTICAL LINES*/
+  /* border: 1px dashed var(--sklearn-color-line);  */
   /* margin: 0 0.4em 0.5em 0.4em; */
   box-sizing: border-box;
   padding-bottom: 0.4em;
@@ -86,7 +86,7 @@
   align-items: flex-start;
   justify-content: left;
   background-color: var(--sklearn-color-background);
-  position: relative;
+  /* position: relative; */
   /* border: 2px solid red; */
 }
 
@@ -110,7 +110,7 @@
   background-color: var(--sklearn-color-background);
   padding-right: 1em;
   padding-left: 1em;
- position: relative;
+ /* position: relative; */
 }
 /* tree lines */
 .sk-global div.sk-serial div.sk-item::before,
